@@ -33,44 +33,48 @@
             scroll-behavior: smooth;
         }
 
-        /* 導覽列 */
+        /* 導覽列：Logo 與選單靠左排列 */
         header {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
-            background: rgba(250, 248, 245, 0.92);
+            background: rgba(250, 248, 245, 0.95);
             backdrop-filter: blur(8px);
             border-bottom: 1px solid var(--border-color);
             display: flex;
-            justify-content: space-between;
             align-items: center;
-            padding: 16px 40px;
+            padding: 14px 30px;
             z-index: 1000;
+            gap: 40px;
+            flex-wrap: wrap;
         }
 
         .logo {
             font-family: 'Noto Serif TC', serif;
-            font-size: 1.25rem;
+            font-size: 1.2rem;
             color: var(--primary-dark);
             letter-spacing: 2px;
             font-weight: 600;
+            white-space: nowrap;
         }
 
         nav {
             display: flex;
-            gap: 30px;
+            gap: 20px;
+            flex-wrap: wrap;
         }
 
         nav a {
             text-decoration: none;
             color: var(--text-light);
-            font-size: 0.95rem;
+            font-size: 0.9rem;
             font-weight: 500;
             transition: color 0.3s;
             cursor: pointer;
             padding-bottom: 2px;
             border-bottom: 2px solid transparent;
+            white-space: nowrap;
         }
 
         nav a:hover, nav a.active {
@@ -97,25 +101,25 @@
         .container {
             max-width: 1000px;
             margin: 0 auto;
-            padding: 120px 20px 80px 20px;
+            padding: 110px 20px 80px 20px;
         }
 
         .section-header {
             text-align: center;
-            margin-bottom: 50px;
+            margin-bottom: 40px;
         }
 
         .section-header h2 {
             font-family: 'Noto Serif TC', serif;
-            font-size: 2rem;
+            font-size: 1.8rem;
             color: var(--text-main);
             letter-spacing: 2px;
-            margin-bottom: 10px;
+            margin-bottom: 8px;
         }
 
         .section-header p {
             color: var(--text-light);
-            font-size: 0.95rem;
+            font-size: 0.9rem;
             letter-spacing: 1px;
         }
 
@@ -123,19 +127,19 @@
             width: 40px;
             height: 2px;
             background-color: var(--primary);
-            margin: 15px auto 0;
+            margin: 12px auto 0;
         }
 
         /* 卡片與網格佈局 */
         .grid-2 {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(440px, 1fr));
-            gap: 30px;
+            grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+            gap: 25px;
         }
 
         .card {
             background: var(--white);
-            padding: 35px;
+            padding: 30px;
             border-radius: 12px;
             border: 1px solid var(--border-color);
             box-shadow: 0 4px 20px rgba(0,0,0,0.02);
@@ -144,14 +148,14 @@
 
         .card h3 {
             font-family: 'Noto Serif TC', serif;
-            font-size: 1.25rem;
+            font-size: 1.15rem;
             color: var(--primary-dark);
-            margin-bottom: 20px;
+            margin-bottom: 15px;
             display: flex;
             align-items: center;
             gap: 10px;
             border-bottom: 1px solid var(--secondary);
-            padding-bottom: 12px;
+            padding-bottom: 10px;
         }
 
         .card ul {
@@ -161,8 +165,8 @@
         }
 
         .card li {
-            margin-bottom: 12px;
-            font-size: 0.95rem;
+            margin-bottom: 10px;
+            font-size: 0.92rem;
             color: var(--text-light);
             position: relative;
             padding-left: 18px;
@@ -184,12 +188,12 @@
             background-color: var(--white);
             border: 1px solid var(--border-color);
             border-radius: 16px;
-            padding: 50px;
+            padding: 40px;
             box-shadow: 0 4px 20px rgba(0,0,0,0.02);
         }
 
         .notice-category {
-            margin-bottom: 35px;
+            margin-bottom: 30px;
         }
 
         .notice-category:last-child {
@@ -198,9 +202,9 @@
 
         .notice-category h3 {
             font-family: 'Noto Serif TC', serif;
-            font-size: 1.15rem;
+            font-size: 1.1rem;
             color: var(--primary-dark);
-            margin-bottom: 15px;
+            margin-bottom: 12px;
             border-left: 3px solid var(--primary);
             padding-left: 10px;
         }
@@ -212,7 +216,7 @@
 
         .notice-category li {
             margin-bottom: 8px;
-            font-size: 0.95rem;
+            font-size: 0.92rem;
             color: var(--text-light);
             position: relative;
             padding-left: 15px;
@@ -230,10 +234,10 @@
             display: inline-block;
             background-color: var(--secondary);
             color: var(--primary-dark);
-            font-size: 0.8rem;
+            font-size: 0.78rem;
             padding: 3px 10px;
             border-radius: 4px;
-            margin-bottom: 10px;
+            margin-bottom: 8px;
             font-weight: 500;
         }
 
@@ -241,7 +245,7 @@
             float: right;
             color: var(--primary-dark);
             font-weight: 600;
-            font-size: 1.1rem;
+            font-size: 1.05rem;
         }
 
         /* 頁尾 */
@@ -249,7 +253,7 @@
             background-color: #2f2d2b;
             color: var(--white);
             text-align: center;
-            padding: 40px 20px;
+            padding: 35px 20px;
             font-size: 0.85rem;
             letter-spacing: 1px;
         }
@@ -262,17 +266,17 @@
         /* 浮動 Line */
         .floating-line {
             position: fixed;
-            bottom: 30px;
-            right: 30px;
+            bottom: 25px;
+            right: 25px;
             background-color: #06C755;
             color: white;
-            width: 55px;
-            height: 55px;
+            width: 52px;
+            height: 52px;
             border-radius: 50%;
             display: flex;
             justify-content: center;
             align-items: center;
-            font-size: 28px;
+            font-size: 26px;
             box-shadow: 0 4px 15px rgba(6, 199, 85, 0.3);
             z-index: 999;
             transition: transform 0.3s;
@@ -285,23 +289,27 @@
 
         @media (max-width: 768px) {
             header {
-                padding: 15px 20px;
+                padding: 12px 15px;
+                gap: 15px;
             }
             nav {
-                display: none;
+                gap: 12px;
+            }
+            nav a {
+                font-size: 0.82rem;
             }
             .grid-2 {
                 grid-template-columns: 1fr;
             }
             .notice-section {
-                padding: 25px;
+                padding: 20px;
             }
         }
     </style>
 </head>
 <body>
 
-    <!-- 導覽列 -->
+    <!-- 導覽列：Logo 與分頁按鈕靠左緊鄰 -->
     <header>
         <div class="logo">城堡美學</div>
         <nav>
